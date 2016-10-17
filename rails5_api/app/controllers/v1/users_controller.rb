@@ -1,4 +1,4 @@
-class UsersController < ApplicationController
+class V1::UsersController < V1::BaseController
   def index
     users = User.page(params[:page] || 1)
     render json: users, meta: pagination_meta(users)
