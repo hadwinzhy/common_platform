@@ -10,15 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161013071110) do
+ActiveRecord::Schema.define(version: 20161013102147) do
 
-  create_table "rental_units", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "address"
-    t.integer  "rooms"
-    t.integer  "bathrooms"
-    t.integer  "price_cents"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+  create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+    t.string   "full_name"
+    t.string   "password_digest"
+    t.string   "token"
+    t.text     "description",     limit: 65535
+    t.index ["token"], name: "index_users_on_token", unique: true, using: :btree
   end
 
 end
