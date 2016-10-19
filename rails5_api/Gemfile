@@ -29,6 +29,8 @@ gem "will_paginate"
 
 gem 'versionist'  ## for api version
 
+gem 'rack-attack' ## for protect from DDoS
+
 #################### Development Gem ####################
 
 group :development, :test do
