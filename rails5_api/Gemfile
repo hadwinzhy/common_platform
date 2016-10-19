@@ -31,6 +31,8 @@ gem 'versionist'  ## for api version
 
 gem 'rack-attack' ## for protect from DDoS
 
+gem 'devise_token_auth'
+
 #################### Development Gem ####################
 
 group :development, :test do
