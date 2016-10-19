@@ -31,7 +31,9 @@ gem 'versionist'  ## for api version
 
 gem 'rack-attack' ## for protect from DDoS
 
-gem 'devise_token_auth'
+gem 'devise'
+
+gem 'jwt' ## http://jwt.io for encoding/decoding token
 
 #################### Development Gem ####################
 

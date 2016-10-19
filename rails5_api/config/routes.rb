@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  mount_devise_token_auth_for 'User', at: 'auth', skip: [:omniauth_callbacks]
+
+  devise_for :users, at: 'auth', skip: [:omniauth_callbacks], controllers: { sessions: 'auth/sessions' }
 
   #################### V1 (default) ##################
 
