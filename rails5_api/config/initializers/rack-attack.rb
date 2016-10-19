@@ -9,7 +9,13 @@ class Rack::Attack
   # whitelisting). It must implement .increment and .write like
   # ActiveSupport::Cache::Store
 
-  # Rack::Attack.cache.store = ActiveSupport::Cache::MemoryStore.new
+  Rack::Attack.cache.store = ActiveSupport::Cache::MemoryStore.new
+
+
+  # Allow all local traffic
+  safelist('allow-localhost') do |req|
+    '127.0.0.1' == req.ip || '::1' == req.ip
+  end
 
   ### Throttle Spammy Clients ###
 
