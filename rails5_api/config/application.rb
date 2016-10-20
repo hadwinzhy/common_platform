@@ -29,5 +29,9 @@ module Rails5Api
 
     config.middleware.use Rack::Attack
 
+    config.autoload_paths += [
+      "#{config.root}/app/models/remote_db",
+    ]
+
   end
 end

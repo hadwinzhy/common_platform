@@ -2,8 +2,6 @@ class Auth::SessionsController < Devise::SessionsController
   # Our method for encoding/decoding JWT
   require 'auth_token'
 
-  respond_to :html, :json
-
   #POST /sign_in
   def create
     self.resource = warden.authenticate!(auth_options)
@@ -16,7 +14,7 @@ class Auth::SessionsController < Devise::SessionsController
     # in rails 5 api, just render data
     render json: {user: resource.email, token: token}
 
-    # Not user devise default response
+    # Not use devise default response
     # respond_with resource, location: after_sign_in_path_for(resource)
   end
 end
