@@ -10,12 +10,13 @@ gem 'active_model_serializers', '~> 0.10.0'
 
 # Use mysql as the database for Active Record
 gem 'mysql2', '>= 0.3.18', '< 0.5'
-# Use Puma as the app server
-gem 'puma', '~> 3.0'
+
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.5'
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
+
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
@@ -35,11 +36,17 @@ gem 'devise'
 
 gem 'jwt' ## http://jwt.io for encoding/decoding token
 
+# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
 #################### Development Gem ####################
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+
+  # Use Puma as the app server
+  gem 'puma', '~> 3.0'
 end
 
 group :development do
@@ -49,5 +56,13 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+#################### Production Gem ####################
+
+group :production do
+  gem "passenger", ">= 5.0.25", require: "phusion_passenger/rack_handler"
+end
+
+
+#################### Project Gem ####################
+
+### add here for project own gem
