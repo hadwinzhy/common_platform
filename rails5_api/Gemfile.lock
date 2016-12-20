@@ -43,6 +43,9 @@ GEM
       i18n (~> 0.7)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
+    acts_as_paranoid (0.5.0)
+      activerecord (>= 4.0, < 5.1)
+      activesupport (>= 4.0, < 5.1)
     arel (7.1.4)
     bcrypt (3.1.11)
     builder (3.2.2)
@@ -55,6 +58,8 @@ GEM
       responders
       warden (~> 1.2.3)
     erubis (2.7.0)
+    faraday (0.10.0)
+      multipart-post (>= 1.2, < 3)
     ffi (1.9.14)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
@@ -76,6 +81,7 @@ GEM
     mime-types-data (3.2016.0521)
     mini_portile2 (2.1.0)
     minitest (5.9.1)
+    multipart-post (2.0.0)
     mysql2 (0.4.4)
     nio4r (1.2.1)
     nokogiri (1.6.8.1)
@@ -84,7 +90,6 @@ GEM
     passenger (5.0.30)
       rack
       rake (>= 0.8.1)
-    puma (3.6.0)
     rack (2.0.1)
     rack-attack (5.0.1)
       rack
@@ -153,14 +158,15 @@ PLATFORMS
 
 DEPENDENCIES
   active_model_serializers (~> 0.10.0)
+  acts_as_paranoid
   bcrypt (~> 3.1.7)
   byebug
   devise
+  faraday
   jwt
   listen (~> 3.0.5)
   mysql2 (>= 0.3.18, < 0.5)
   passenger (>= 5.0.25)
-  puma (~> 3.0)
   rack-attack
   rack-cors
   rails (~> 5.0.0, >= 5.0.0.1)
