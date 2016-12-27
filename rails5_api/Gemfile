@@ -46,6 +46,11 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring'
 
+# Batch API
+gem 'batch_api'
+gem 'multi_json'  # for batch api, but it's change https://github.com/arsduo/batch_api/pull/40/files
+
+
 #################### Development Gem ####################
 
 group :development, :test do
@@ -68,3 +73,5 @@ end
 #################### Project Gem ####################
 
 ### add here for project own gem
+
+gem 'groupdate' #group by date
