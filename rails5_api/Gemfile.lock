@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/heyshop/batch_api.git
+  revision: 04cd58c3e2a96a3483638791d748c971d40772b1
+  specs:
+    batch_api (0.3.0)
+      middleware
+
 GEM
   remote: https://ruby.taobao.org/
   specs:
@@ -47,8 +54,6 @@ GEM
       activerecord (>= 4.0, < 5.1)
       activesupport (>= 4.0, < 5.1)
     arel (7.1.4)
-    batch_api (0.3.0)
-      middleware
     bcrypt (3.1.11)
     builder (3.2.2)
     byebug (9.0.6)
@@ -86,7 +91,6 @@ GEM
     mime-types-data (3.2016.0521)
     mini_portile2 (2.1.0)
     minitest (5.9.1)
-    multi_json (1.12.1)
     multipart-post (2.0.0)
     mysql2 (0.4.4)
     nio4r (1.2.1)
@@ -165,7 +169,7 @@ PLATFORMS
 DEPENDENCIES
   active_model_serializers (~> 0.10.0)
   acts_as_paranoid
-  batch_api
+  batch_api!
   bcrypt (~> 3.1.7)
   byebug
   devise
@@ -173,7 +177,6 @@ DEPENDENCIES
   groupdate
   jwt
   listen (~> 3.0.5)
-  multi_json
   mysql2 (>= 0.3.18, < 0.5)
   passenger (>= 5.0.25)
   rack-attack

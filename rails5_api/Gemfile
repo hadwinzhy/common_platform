@@ -47,8 +47,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'spring'
 
 # Batch API
-gem 'batch_api'
-gem 'multi_json'  # for batch api, but it's change https://github.com/arsduo/batch_api/pull/40/files
+gem 'batch_api', git: 'git://github.com/heyshop/batch_api.git'
 
 
 #################### Development Gem ####################
