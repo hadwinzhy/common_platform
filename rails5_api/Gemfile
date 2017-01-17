@@ -49,6 +49,11 @@ gem 'spring'
 # Batch API
 gem 'batch_api', git: 'git://github.com/heyshop/batch_api.git'
 
+gem 'sidekiq'
+
+#################### Utils Gem ##########################
+
+gem 'addressable', '>= 2.5.0' #for url check
 
 #################### Development Gem ####################
 
