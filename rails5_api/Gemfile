@@ -55,11 +55,12 @@ gem 'sidekiq'
 
 gem 'addressable', '>= 2.5.0' #for url check
 
-#################### Development Gem ####################
+################ Development & Test Gem #################
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+  gem 'rspec-rails', '~> 3.5'
 end
 
 group :development do
