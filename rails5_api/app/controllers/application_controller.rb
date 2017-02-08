@@ -4,8 +4,18 @@ class ApplicationController < ActionController::API
   protected
 
   def verify_jwt_token
-    head :unauthorized if request.headers['Authorization'].nil? ||
-                          !AuthToken.valid?(request.headers['Authorization'].split(' ').last)
+    if Rails.env == 'production'
+      authorization_str = request.headers['Authorization']
+      return head :unauthorized unless authorization_str
+      token = authorization_str.split(' ').last
+      return head :unauthorized unless token
+
+      if params["controller"].include? 'xxx'
+        return head :unauthorized unless token == 'xxx'
+      else
+        return head :unauthorized if !AuthToken.valid?(token)
+      end
+    end
   end
 
 end
