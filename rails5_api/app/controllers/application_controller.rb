@@ -3,17 +3,29 @@ class ApplicationController < ActionController::API
 
   protected
 
+  ########## Verify ##########
+
+  def get_key_from_params key_name
+    return params[key_name]
+  end
+
+  def get_auth_token
+    begin
+      return request.headers['Authorization'].split(' ').last
+    rescue
+      p "No Authorization Found #{request.headers['Authorization']}"
+      return nil
+    end
+  end
+
   def verify_jwt_token
     if Rails.env == 'production'
-      authorization_str = request.headers['Authorization']
-      return head :unauthorized unless authorization_str
-      token = authorization_str.split(' ').last
-      return head :unauthorized unless token
-
       if params["controller"].include? 'xxx'
-        return head :unauthorized unless token == 'xxx'
+        api_key = self.get_key_from_params "api_key"
+        return head :unauthorized unless api_key == 'xxx'
       else
-        return head :unauthorized if !AuthToken.valid?(token)
+        token = self.get_auth_token
+        return head :unauthorized if token.nil? or !AuthToken.valid?(token)
       end
     end
   end
