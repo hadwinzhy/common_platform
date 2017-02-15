@@ -1,6 +1,13 @@
 GIT
-  remote: git://github.com/heyshop/batch_api.git
-  revision: 04cd58c3e2a96a3483638791d748c971d40772b1
+  remote: https://github.com/carrotsense/activesupport-json_encoder.git
+  revision: 7e4d34ea2152902c225b1d9ba61794c13ff511ac
+  specs:
+    activesupport-json_encoder (1.1.0)
+      activesupport (>= 4.1.0)
+
+GIT
+  remote: https://github.com/heyshop/batch_api.git
+  revision: 924843d093ef928bd2f312c8304c156f24d1fe1a
   specs:
     batch_api (0.3.0)
       middleware
@@ -201,6 +208,7 @@ PLATFORMS
 
 DEPENDENCIES
   active_model_serializers (~> 0.10.0)
+  activesupport-json_encoder!
   acts_as_paranoid
   addressable (>= 2.5.0)
   batch_api!
@@ -226,4 +234,4 @@ DEPENDENCIES
   will_paginate
 
 BUNDLED WITH
-   1.12.5
+   1.14.3

@@ -1,6 +1,8 @@
 class ApplicationController < ActionController::API
   require 'auth_token'
 
+  ActiveSupport::JSON::Encoding.encode_big_decimal_as_string = false
+
   protected
 
   ########## Verify ##########
