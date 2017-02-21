@@ -52,6 +52,7 @@ gem 'spring'
 gem 'batch_api', git: 'https://github.com/heyshop/batch_api.git'
 
 gem 'sidekiq'
+gem 'sidekiq-scheduler'
 
 #################### Utils Gem ##########################
 

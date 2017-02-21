@@ -1,0 +1,9 @@
+:concurrency: 5 # 并发数
+:logfile: ./log/sidekiq.log
+:verbose: true
+
+:schedule:
+  # history_order_worker:
+  #   cron: '0 0 * * *'
+  #   class: HistoryOrderWorker
+  #   description: 'make history for all order'
