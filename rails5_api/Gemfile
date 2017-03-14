@@ -54,6 +54,8 @@ gem 'batch_api', git: 'https://github.com/heyshop/batch_api.git'
 gem 'sidekiq'
 gem 'sidekiq-scheduler'
 
+gem 'apipie-rails' # api doc for rails
+
 #################### Utils Gem ##########################
 
 gem 'addressable', '>= 2.5.0' #for url check

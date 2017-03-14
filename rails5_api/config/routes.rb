@@ -5,6 +5,7 @@ require 'sidekiq-scheduler/web'
 
 Rails.application.routes.draw do
 
+  apipie
   mount Sidekiq::Web => '/sidekiq'
 
   devise_for :users, at: 'auth', skip: [:omniauth_callbacks], controllers: { sessions: 'auth/sessions' }

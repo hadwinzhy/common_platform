@@ -62,6 +62,9 @@ GEM
       activesupport (>= 4.0, < 5.1)
     addressable (2.5.0)
       public_suffix (~> 2.0, >= 2.0.2)
+    apipie-rails (0.4.0)
+      json
+      rails (>= 4.0)
     arel (7.1.4)
     bcrypt (3.1.11)
     builder (3.2.2)
@@ -221,6 +224,7 @@ DEPENDENCIES
   activesupport-json_encoder!
   acts_as_paranoid
   addressable (>= 2.5.0)
+  apipie-rails
   batch_api!
   bcrypt (~> 3.1.7)
   byebug
